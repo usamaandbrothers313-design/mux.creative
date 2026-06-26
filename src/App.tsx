@@ -289,13 +289,13 @@ export default function App() {
       </AnimatePresence>
 
       {/* Floating Scroll-Bound Logo */}
-      <div className="fixed right-4 md:right-8 top-0 bottom-0 w-px bg-white/5 z-40 hidden md:block">
+      <div className="fixed right-2 md:right-8 top-0 bottom-0 w-px bg-white/5 z-40">
         <motion.div 
           style={{ top: yRange }}
           className="absolute left-1/2 -translate-x-1/2 pt-20"
         >
           <div className="rotate-90 origin-center whitespace-nowrap">
-            <span className="font-display font-bold text-4xl tracking-tighter text-white/10 select-none">
+            <span className="font-display font-bold text-2xl md:text-4xl tracking-tighter text-white/10 select-none">
               MUX<span className="text-red-600/20">.</span>
             </span>
           </div>
@@ -358,7 +358,7 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="hidden lg:flex justify-center items-center relative"
+              className="flex justify-center items-center relative mt-12 lg:mt-0"
             >
               <div className="w-full aspect-square relative border border-white/5 bg-surface-light/30 backdrop-blur-sm p-4 flex flex-col justify-between">
                 <div className="flex justify-between w-full text-white/20 font-mono text-xs">
@@ -523,14 +523,14 @@ export default function App() {
             </div>
 
             {/* Bento Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 md:auto-rows-[300px] gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:auto-rows-[250px] md:auto-rows-[300px] gap-4 md:gap-6">
               {portfolioItems.map((item, i) => {
                 // Create a varied grid layout
                 const isLarge = i === 0 || i === 3;
                 return (
                   <div 
                     key={item.id} 
-                    className={`group relative overflow-hidden border border-white/10 bg-surface-light ${isLarge ? 'md:col-span-2' : 'md:col-span-1'} hover:border-white/30 transition-all`}
+                    className={`group relative overflow-hidden border border-white/10 bg-surface-light min-h-[300px] sm:min-h-0 ${isLarge ? 'sm:col-span-2' : 'sm:col-span-1'} hover:border-white/30 transition-all`}
                   >
                     {/* Media Content */}
                     <div className="absolute inset-0 bg-surface z-0">
@@ -600,8 +600,8 @@ export default function App() {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-600/5 rounded-[100%] blur-[120px] pointer-events-none"></div>
         
         {/* Background Watermark */}
-        <div className="absolute -bottom-20 -right-20 pointer-events-none select-none overflow-hidden">
-          <div className="font-display font-bold text-[15rem] md:text-[25rem] leading-none text-black/20 rotate-[-15deg] tracking-tighter">
+        <div className="absolute -bottom-32 -right-32 pointer-events-none select-none overflow-hidden">
+          <div className="font-display font-bold text-[25rem] md:text-[45rem] leading-none text-black/20 rotate-[-15deg] tracking-tighter">
             MUX<span className="text-red-900/10">.</span>
           </div>
         </div>
