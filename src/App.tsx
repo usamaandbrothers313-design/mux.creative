@@ -658,7 +658,7 @@ export default function App() {
             </button>
 
             <a 
-              href="https://instagram.com/mux_creative"
+              href="https://www.instagram.com/muhammadusama.geo?igsh=YTZyYW1rNG01NWdk"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-4 border border-white/10 bg-black hover:border-accent hover:bg-accent/5 transition-all min-w-[300px] group"
@@ -668,7 +668,7 @@ export default function App() {
               </div>
               <div>
                 <p className="text-xs font-mono text-gray-500 uppercase tracking-widest">Instagram</p>
-                <p className="font-display text-lg">@mux_creative</p>
+                <p className="font-display text-lg">muhammadusama.geo</p>
               </div>
             </a>
           </div>
